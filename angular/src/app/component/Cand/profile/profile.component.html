@@ -1,0 +1,68 @@
+<div class="content row" *ngIf="user">
+    <!-- Left col -->
+    <div class="col-md-12">
+  <div class="box ">
+    
+    <div class="box-body">
+
+        <div class="container" style="margin-top: 30px;">
+            <div >
+            <div class="col-md- col-sm-4 col-xs-12">
+            <img src="../assets/22.jpg" class="img-responsive" />
+            <h6>Zain Ur Rehman</h6>
+            </div><!--col-md-4 col-sm-4 col-xs-12 close-->
+            
+            
+            <div class="col-md-5 col-sm-5 col-xs-12">
+            <h5> {{user.FirstName}}</h5>
+            <p>{{user.UserName}}</p>
+            <ul>
+            <li><span class="glyphicon glyphicon-briefcase"></span> 5 years</li>
+            <li><span class="glyphicon glyphicon-map-marker"></span>Karachi, Pakistan</li>
+            <li><span class="glyphicon glyphicon-home"></span> H.No M-65 Muslimabad Malir City </li>
+            <li><span class="glyphicon glyphicon-phone"></span> <a href="#" title="call">0312-2880329</a></li>
+            <li><span class="glyphicon glyphicon-envelope"></span><a href="#" title="mail">{{user.Email}}</a></li>
+            
+            </ul>
+            
+            
+            </div><!--col-md-8 col-sm-8 col-xs-12 close-->
+            
+            
+            
+            
+            </div><!--profile-head close-->
+            </div><!--container close-->
+            
+      
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+<div  class="container">
+    
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-menu" >
+      <li class="active"  [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['profile/profileview']">
+          <a >
+              <i class="fa fa-male"></i> Profile
+          </a>
+      </li>
+      <li [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['profile/profileedit']">
+        <a  >
+          <i class="fa fa-key"></i> Edit Profile
+          </a>
+      </li>
+      <li [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['profile/complain']">
+        <a  >
+          <i class="fa fa-pen"></i> Send Complain 
+          </a>
+      </li>
+    </ul><!--nav-tabs close-->
+  </div>
+  <div class="container">
+      <router-outlet></router-outlet>
+ </div>
+ 

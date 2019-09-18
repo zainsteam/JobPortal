@@ -1,0 +1,70 @@
+<div class="wrapper" id="wrapper">
+  <div class="left-container" id="left-container">
+    <!-- begin SIDE NAV USER PANEL -->
+    <div class="left-sidebar" id="show-nav">
+      <ul id="side" class="side-nav">
+        <!-- <li class="panel">
+          <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/userdashitem']"><span class="glyphicon glyphicon-th-list "></span>
+            User DashBoard</a>       </li> -->
+        <li class="panel">
+          <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/Orgdashitem']"><span class="glyphicon glyphicon-th-list"></span> 
+            Org DashBoard</a>
+        </li>
+        <!-- <li class="panel">
+            <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/profile']">            <span class="glyphicon glyphicon-user"></span>
+              User Profile</a>
+          </li> -->
+          <li class="panel">
+            <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/profile']">            <span class="glyphicon glyphicon-user"></span>
+              Org Profile</a>
+          </li>
+            <li class="panel">
+                <a id="panel1"  data-toggle="collapse" data-target="#job"> <i class="fa fa-trash"></i> 
+                  Manage Jobs
+                  <i class="fa fa fa-chevron-left pull-right" id="arow9"></i>
+                </a>
+                <ul class="collapse nav" id="job">
+                    <li><a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/jobform']" (click)="newCandidate($event)" ><span class="glyphicon glyphicon-log-in"></span>
+                      Add vacancy</a> </li>
+                  <li> <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/alljobs']"><span class="glyphicon glyphicon-log-in"></span>
+                     View All Jobs</a> </li>
+                </ul>
+              </li>
+        <li class="panel">
+            <a id="panel1"  data-toggle="collapse" data-target="#QuestionBank"> <i class="fa fa-trash"></i> 
+              Manage Question Bank
+              <i class="fa fa fa-chevron-left pull-right" id="arow10"></i>
+            </a>
+            <ul class="collapse nav" id="QuestionBank">
+                <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/questionbank']">            <span class="glyphicon glyphicon-briefcase"></span>
+                  Question Bank</a>
+                  <li> <a href="#"><i class="fa fa-angle-double-right"></i> View All  Question Bank</a> </li>
+            </ul>
+            </li>
+            <li class="panel">
+                <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/applicant']">
+                  <span class="glyphicon glyphicon-exclamation-sign"></span>  
+                   Application</a>
+            </li>
+            <!-- <li class="panel">
+              <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/complain']">
+                <span class="glyphicon glyphicon-ok-circle"></span>  
+                 Test</a>
+          </li>     -->
+            <!-- <li class="panel">
+            <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['/']">            <span class="glyphicon glyphicon-facetime-video"></span>
+               Interviews</a>
+        </li> -->
+        <li class="panel">
+            <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard/complain']">
+              <span class="glyphicon glyphicon-exclamation-sign"></span>  
+               Complains</a>
+        </li>
+      </ul>
+    </div>
+    <!-- END SIDE NAV USER PANEL -->
+  </div>
+  <div class="right-container " id="right-container">
+     <router-outlet></router-outlet>
+</div>
+</div>

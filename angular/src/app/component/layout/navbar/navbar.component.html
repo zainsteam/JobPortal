@@ -1,0 +1,125 @@
+<nav class="navbar  navbar-inverse navbar-fixed-top" >
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a [routerLink] = "['']" class="nav navbar-nav" >
+        <!-- <img class="img-responsive" src="../assets/logo.png" alt="" > -->
+      </a>     
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+                    <li *ngIf="authservice.login()" class="nav-item ">
+              <a class="nav-link ">
+                    <span class="menu-icon" id="menu-icon"><i class="fa fa-times" aria-hidden="true" id="chang-menu-icon"></i></span>
+                </a>  
+                </li>
+                
+        <li class="nav-item ">
+            <a  class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['']">
+                <span class="glyphicon glyphicon-home"></span>
+                Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Job']">
+              <span class="glyphicon glyphicon-file"></span>
+            Job</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Job_view']">
+              <span class="glyphicon glyphicon-file"></span>
+        Job_view</a>
+        </li>
+      <!-- <li class="form-inline my-2 col-md-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </li> -->
+      </ul>
+      <ul  class="nav navbar-nav navbar-right ">
+                <li *ngIf="authservice.login()" class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-bell"></span>  
+                    </a>
+                    <ul class="dropdown-menu notify-drop">
+                      <div class="notify-drop-title">
+                          <div class="row">
+                              <div class="col-md-6 col-sm-6 col-xs-6">Notification (<b>2</b>)</div>
+                              <div class="col-md-6 col-sm-6 col-xs-6 text-right"><a href="" class="rIcon allRead" data-tooltip="tooltip" data-placement="bottom" title="tümü okundu."><i class="fa fa-dot-circle-o"></i></a></div>
+                          </div>
+                      </div>
+                      <!-- end notify title -->
+                      <!-- notify content -->
+                      <div class="drop-content">
+                          <li>
+                              <div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+                              <div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+                              
+                              <hr>
+                              <p class="time">Şimdi</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+                              <div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+                              <p>Lorem ipsum sit dolor amet consilium.</p>
+                              <p class="time">1 Saat önce</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+                              <div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+                              <p>Lorem ipsum sit dolor amet consilium.</p>
+                              <p class="time">29 Dakika önce</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+                              <div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+                              <p>Lorem ipsum sit dolor amet consilium.</p>
+                              <p class="time">Dün 13:18</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="col-md-3 col-sm-3 col-xs-3"><div class="notify-img"><img src="http://placehold.it/45x45" alt=""></div></div>
+                              <div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href="">Ahmet</a> yorumladı. <a href="">Çicek bahçeleri...</a> <a href="" class="rIcon"><i class="fa fa-dot-circle-o"></i></a>
+                              <p>Lorem ipsum sit dolor amet consilium.</p>
+                              <p class="time">2 Hafta önce</p>
+                              </div>
+                          </li>
+                      </div>
+                      <div class="notify-drop-footer text-center">
+                          <a href=""><i class="fa fa-eye"></i> See All Notification</a>
+                      </div>
+                    </ul>
+                  </li>
+
+                  <li *ngIf="authservice.login()" class="nav-item">
+                    <a class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard']">
+                      <span class="glyphicon glyphicon-th-list"></span>
+                    Dashboard</a>
+                </li>
+                
+          <li *ngIf="authservice.login()" class="nav-item ">
+              <a class="nav-link" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['profile']"> <span class="glyphicon glyphicon-user"></span>    
+                Profile</a>
+          </li>
+
+        <li *ngIf="!authservice.login()" class="nav-item ">
+              <a z class="nav-link" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Register']"> <span class="glyphicon glyphicon-user"></span>
+                Registration</a>
+          </li>
+          <li *ngIf="authservice.login()" class="nav-item ">
+              <a  (click)="logoutclick()"> <span class="glyphicon glyphicon-log-out"></span>     
+                Logout</a>
+          </li>
+          <li *ngIf="!authservice.login()" class="nav-item ">
+              <a   class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Login']"> <span class="glyphicon glyphicon-log-in"></span>     
+                Login</a>
+          </li>
+      </ul>      
+    </div>
+  </div>
+</nav>

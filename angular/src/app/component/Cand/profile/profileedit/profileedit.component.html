@@ -1,0 +1,116 @@
+<div class="tab-content">
+    <div class="tab-pane fade active in" >
+      <div class="box ">
+    
+    <div class="box-body">
+
+  <div class="container">
+      <h1>
+      Update Your Profile
+      </h1>
+      <form  (ngSubmit)="formSubmit()" novalidate> 
+          <div class="row">
+            <div class="form-group col-lg-4" >
+                <label>Upload Your Front Face Image</label> 
+              <input type="file" class="form-control" [(ngModel)]="profilePic" name="profilePic" />
+            </div>
+          </div>
+          <div class="row">
+          <div class="form-group col-lg-5">
+            <label>First Name</label>
+            <input type="text" class="form-control" [(ngModel)]="candidate.FirstName" name="FirstName"  />
+          </div>
+          <div class="form-group col-lg-2">
+              <label>Middle Name</label>
+              <input type="text" class="form-control" [(ngModel)]="candidate.MName" name="MName" />
+            </div>
+          <div class="form-group col-lg-4">
+            <label>Last Name</label>
+            <input type="text" class="form-control" [(ngModel)]="candidate.UserName" name="UserName" />
+          </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-4">
+                <label>Mobile Number</label>
+                <input type="text" class="form-control" [(ngModel)]="candidate.Number" name="Number" />
+            </div>
+            <div class="form-group col-lg-4">
+                <label>Email Address</label>
+                <input type="text" class="form-control" [(ngModel)]="candidate.Email" name="Email" />
+            </div>
+            <div class="form-group col-lg-3">
+                <label>Date Of Birth</label>
+                <input type="Date" class="form-control" [(ngModel)]="candidate.Dob" name="Dob" />
+            </div>
+          </div>
+          <div class="row">
+              <div class="form-group col-lg-4">
+                <label>Country</label>
+                <input type="text" class="form-control" [(ngModel)]="candidate.Country" name="Country" />
+              </div>
+              <div class="form-group col-lg-4">
+                  <label>City</label>
+                  <input type="text" class="form-control" [(ngModel)]="candidate.City" name="City" />
+                </div>
+            </div>   
+          <div class="row">
+        <div class="form-group col-lg-8">
+            <label>Parmanent Address</label>
+            <input type="text" class="form-control" [(ngModel)]="candidate.Address" name="Address" />
+          </div>
+        </div>
+          <div class="row" id="edu">
+          <div class="form-group col-lg-5" >
+            <label>Education</label>
+            <input type="text" class="form-control" placeholder="Education" [(ngModel)]="education" name="education" />  
+          </div>
+          <div class="form-group col-lg-3">
+              <label>year</label>
+              <input type="text" class="form-control" placeholder="Passing year" [(ngModel)]="eyear" name="eyear" />  
+            </div>
+            <div class="form-group col-lg-3">
+                <label>Grade</label>
+                <input type="text" class="form-control" placeholder="Grade" [(ngModel)]="grade" name="grade" />  
+              </div>
+          <div class="form-group col-lg-1">
+          <br><br>
+          <a ><span class="glyphicon glyphicon-plus" id="addedu"></span></a>
+          </div>
+        </div>
+          <div class="row" id="skill">
+          <div class="form-group col-lg-4">
+              <label>Skills</label>
+              <input type="text" class="form-control" placeholder="Skill 1" [(ngModel)]="skill" name="skill" />
+            </div>
+            <div class="form-group col-lg-1">
+                <br><br>
+                <a ><span class="glyphicon glyphicon-plus" id="addskill"></span></a>
+          </div>
+            </div>
+            <div class="row" id="exp">
+              <div  class="form-group col-lg-5">
+                  <label>Experience</label>
+                  <input type="text" class="form-control" placeholder="Experience 1" [(ngModel)]="experience" name="experience" />  
+                </div> 
+                <div class="form-group col-lg-3">
+                    <label>Starting Date</label>
+                    <input type="date" class="form-control"  [(ngModel)]="startdate" name="startdate" />  
+                  </div>   
+                  <div class="form-group col-lg-3">
+                      <label>Ending Date</label>
+                      <input type="date" class="form-control" [(ngModel)]="Enddate" name="Enddate" />  
+                    </div>   
+                    <div class="form-group col-lg-1">
+                    <br><br>
+                  <a ><span class="glyphicon glyphicon-plus" id="addexp" ></span></a>
+              </div>            
+            </div> 
+              <div class="form-group ">
+            <input type="submit" class="btn btn-info col-lg-3"  />
+          </div>
+        </form>
+        </div>
+        </div>
+        </div> 
+        </div>
+        </div>

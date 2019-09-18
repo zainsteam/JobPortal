@@ -1,0 +1,70 @@
+<div class="content row">
+  <!-- Left col -->
+  <div class="col-md-12">
+
+<div class="box box-info">
+  <div class="box-header">
+    <i class="fa fa-envelope"></i>
+
+    <h3 class="box-title"> Create {{ qb }}
+    </h3>
+    <!-- tools box -->
+    <div class="pull-right box-tools">
+      <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+              title="Remove">
+        <i class="fa fa-times"></i></button>
+    </div>
+    <!-- /. tools -->
+  </div>
+  <div class="box-body">
+    <form #Qbform="ngForm" (ngSubmit)="formSubmit(Qbform.value)">
+<div class="row">
+  <div class="form-group col-lg-3">
+    <label>Number Of Question</label>
+    <input type="number" class="form-control" name="NOQuestion " ngModel/>
+</div>
+
+  <div class="form-group col-lg-3">
+              <label >Question Category</label>
+  <select class="form-control" aria-placeholder="Please Select" name="Questioncategory" ng-model >
+              <option>Core Question</option>
+              <option>Related Question</option>
+            </select>
+            </div>
+        <div class="form-group col-lg-3">
+            <label>Picture (Optional)</label>
+            <input type="file" class="form-control" name="picturequestion " ngModel/>
+        </div>
+    
+    <!-- <div class="form-group col-lg-1">
+        <br><br>
+      <a ><span class="glyphicon glyphicon-minus" ></span></a>
+  </div>            
+    <div class="form-group col-lg-1">
+        <br><br>
+      <a ><span class="glyphicon glyphicon-plus " ></span></a>
+  </div>
+             -->
+             <div class="form-group col-lg-8">
+              <label>Question </label>
+              <input type="text" class="form-control" name="textquestion" ngModel/>
+          </div>
+            </div>
+  <div class=" form-group box-footer clearfix">
+          <input type="Submit" class="pull-right btn btn-primary col-lg-2" value="Save">
+          <input type="Submit" class="pull-right btn btn-info col-lg-2" value="Next">
+  </div>
+  </form>
+
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+

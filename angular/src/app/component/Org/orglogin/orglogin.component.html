@@ -1,0 +1,35 @@
+<div class="container" role="form" >
+    <h3 style="text-align:center">
+      Login As A Employer
+    </h3>    
+    <form (ngSubmit)="formSubmit()" >
+      <div class="row">  
+          <div class="form-group ">
+              <label>UserName</label>
+              <input type="text" class="form-control" name="UserName" [(ngModel)] = "UserName">
+            </div>
+            
+          </div>
+            <div class="row">
+            <div class="form-group">
+              <label>Password</label>
+              <input type="Password" class="form-control " name="Password"  [(ngModel)] = "Password">
+            </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <input type="checkbox" >
+                <label>Remember Me</label>
+              </div>
+            </div>
+        <div class="row" >
+        <div class="form-group">
+          <input type="submit" class="btn btn-info col-lg-3" value="Sigin"  >
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <a (click)="Routeregister()">Create a new Account!</a>
+      </div>
+      </form>
+        </div>  

@@ -1,0 +1,27 @@
+{
+  "name": "userauth",
+  "version": "1.0.0",
+  "description": "Mean sigin ang login pages",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "angular-font-awesome": "^3.1.2",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "font-awesome": "^4.7.0",
+    "google-tts-api": "0.0.2",
+    "jquery": "^3.3.1",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "videojs-record": "^2.3.1"
+  },
+  "author": "zain",
+  "license": "ISC"
+}
