@@ -83,7 +83,7 @@ export class RegisterComponent implements OnInit {
       FirstName: this.FirstName,
       Role:"candidate"
     }
-        console.log(user);
+        // console.log(user);
 
     //required fiels
     if(!this.uservalidateservice.validateregister(user)){
@@ -99,7 +99,7 @@ export class RegisterComponent implements OnInit {
 
     //register User
     this.authservice.registerUser(user).subscribe(data => {
-      console.log(user);
+      // console.log(user);
       if(data.success){
         this.flashmeassage.show('you are now registered and can log in',{cssClass: 'alert-success',timeout:3000});
         this.router.navigate(['/Login']);
