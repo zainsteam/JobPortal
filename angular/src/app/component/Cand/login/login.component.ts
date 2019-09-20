@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.authservice.authenticationUser(user).subscribe(data =>{
       if(data.success){
         this.authservice.storeUserData(data.token, data.user);
-        if(data.user.Role == "candidiate"){
+        if(data.user.Role == "candidate"){
         // this.flashmeassage.show('you are logged in',{cssClass: 'alert-success', timeout:3000});
         this.router.navigate(['profile']);
       }
