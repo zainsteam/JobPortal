@@ -18,6 +18,7 @@ router.post('/register', ( req , res , next) => {
     });
 
     if(newUser.Role == "candidate"){
+        console.log(newUser.Role);
         let newCand = new Candidate({
             Email: req.body.Email,
         });
