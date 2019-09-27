@@ -43,7 +43,7 @@ require('./config/passport')(passport);
 
 app.use('/users',users);
 app.use('/organisation',orgusers);
-app.use('/jobs',job);
+app.use('/job',job);
 app.use('/qbank',qbank);
 
 //Static folder
@@ -59,6 +59,7 @@ app.get('*', (req , res) => {
 });
 
 //port number
+
 const port = process.env.PORT || 8080;
 
 //start server
