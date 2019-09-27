@@ -12,7 +12,7 @@ declare var $: any;
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  titl = ' Registration';
+  titl = ' Registration Candidate';
   Email: String;
   UserName: String;
   Password: String;
