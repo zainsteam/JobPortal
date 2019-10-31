@@ -10,7 +10,6 @@ var job =  mongoose.Schema({
     maxsal: { type: Number },
     ldate: { type: String },
     city: { type: String },
-    skill: { type: String },
     exp: { type: String },
     expt: { type: String },
     jdes: { type: String }

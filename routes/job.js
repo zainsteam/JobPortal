@@ -12,7 +12,6 @@ router.post('/create',(req, res, next) => {
     maxsal:req.body.maxsal,
     ldate: req.body.ldate,
     city: req.body.city,
-    skill: req.body.skill,
     exp: req.body.exp,
     expt: req.body.expt,
     jdes: req.body.jdes,

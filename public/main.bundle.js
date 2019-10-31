@@ -466,7 +466,7 @@ var LoginComponent = /** @class */ (function () {
         this.authservice.authenticationUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authservice.storeUserData(data.token, data.user);
-                if (data.user.Role == "candidiate") {
+                if (data.user.Role == "candidate") {
                     // this.flashmeassage.show('you are logged in',{cssClass: 'alert-success', timeout:3000});
                     _this.router.navigate(['profile']);
                 }
@@ -813,7 +813,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/component/Cand/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\n  <h1 style=\"text-align:center\">\n     {{ titl }}\n  </h1>\n  <form (ngSubmit)=\"formSubmit()\">\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"organization\">\n      <div class=\"row\">\n          <div class=\"form-group\">\n            <label>Name</label>\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\n          </div>\n          </div>     \n    <div class=\"row\">  \n      <div class=\"form-group \">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\n        </div>\n      </div>\n    <div class=\"row\">  \n    <div class=\"form-group \">\n        <label>UserName</label>\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n      </div>\n      \n    </div>\n      <div class=\"row\">\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\n      </div>\n      </div> \n      <div class=\"row\">\n      <div class=\"form-group\">\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\n          <div class=\"jp_listing_right_bar_btn\">\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\n          </div>\n        </div>\n      </div>\n    </div>\n    </form>\n      </div>\n      <app-footer></app-footer>"
+module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\n  <h1 style=\"text-align:center\">\n     {{ titl }}\n  </h1>\n  <form (ngSubmit)=\"formSubmit()\">\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"candidate\">\n      <div class=\"row\">\n          <div class=\"form-group\">\n            <label>Name</label>\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\n          </div>\n          </div>     \n    <div class=\"row\">  \n      <div class=\"form-group \">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\n        </div>\n      </div>\n    <div class=\"row\">  \n    <div class=\"form-group \">\n        <label>UserName</label>\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n      </div>\n      \n    </div>\n      <div class=\"row\">\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\n      </div>\n      </div> \n      <div class=\"row\">\n      <div class=\"form-group\">\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\n          <div class=\"jp_listing_right_bar_btn\">\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\n          </div>\n        </div>\n      </div>\n    </div>\n    </form>\n      </div>\n      <app-footer></app-footer>"
 
 /***/ }),
 
@@ -848,7 +848,7 @@ var RegisterComponent = /** @class */ (function () {
         this.flashmeassage = flashmeassage;
         this.authservice = authservice;
         this.router = router;
-        this.titl = ' Registration';
+        this.titl = ' Registration Candidate';
     }
     RegisterComponent.prototype.ngOnInit = function () {
         $(document).ready(function () {
@@ -901,9 +901,9 @@ var RegisterComponent = /** @class */ (function () {
             UserName: this.UserName,
             Password: this.Password,
             FirstName: this.FirstName,
-            Role: "organization"
+            Role: this.Role
         };
-        console.log(user);
+        // console.log(user);
         //required fiels
         if (!this.uservalidateservice.validateregister(user)) {
             this.flashmeassage.show('please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
@@ -916,7 +916,7 @@ var RegisterComponent = /** @class */ (function () {
         }
         //register User
         this.authservice.registerUser(user).subscribe(function (data) {
-            console.log(user);
+            // console.log(user);
             if (data.success) {
                 _this.flashmeassage.show('you are now registered and can log in', { cssClass: 'alert-success', timeout: 3000 });
                 _this.router.navigate(['/Login']);
@@ -1671,20 +1671,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var JobserviceService = /** @class */ (function () {
     function JobserviceService(http) {
         this.http = http;
-        this.baseUri = "http://localhost:3000/jobs";
+        // private baseUri:string="http://localhost:3000/jobs";
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Content-Type', 'application/json');
     }
     JobserviceService.prototype.createCandidate = function (job) {
-        return this.http.post(this.baseUri + '/create', job, { headers: this.headers });
+        return this.http.post('/create', job, { headers: this.headers });
     };
     JobserviceService.prototype.readCandidatess = function () {
-        return this.http.get(this.baseUri + '/read', { headers: this.headers });
+        return this.http.get('/read', { headers: this.headers });
     };
     JobserviceService.prototype.updateCandidate = function (job) {
-        return this.http.put(this.baseUri + '/update', job, { headers: this.headers });
+        return this.http.put('/update', job, { headers: this.headers });
     };
     JobserviceService.prototype.deleteCandidate = function (id) {
-        return this.http.delete(this.baseUri + '/delete/' + id, { headers: this.headers });
+        return this.http.delete('/delete/' + id, { headers: this.headers });
     };
     JobserviceService.prototype.setter = function (job) {
         this.job = job;
@@ -1932,7 +1932,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/component/Org/orgregister/orgregister.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\n  <h1 style=\"text-align:center\">\n    Register As A Employer / Company   \n  </h1>\n  <form (ngSubmit)=\"formSubmit()\">\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"organization\">\n      <div class=\"row\">\n          <div class=\"form-group\">\n            <label>Name</label>\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\n          </div>\n          </div>     \n    <div class=\"row\">  \n      <div class=\"form-group \">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\n        </div>\n      </div>\n    <div class=\"row\">  \n    <div class=\"form-group \">\n        <label>UserName</label>\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n      </div>\n      \n    </div>\n      <div class=\"row\">\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\n      </div>\n      </div> \n      <div class=\"row\">\n      <div class=\"form-group\">\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\n          <div class=\"jp_listing_right_bar_btn\">\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\n          </div>\n        </div>\n      </div>\n    </div>\n    </form>\n      </div>\n      <app-footer></app-footer>"
+module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\n  <h1 style=\"text-align:center\">\n    Register As A Employer / Company   \n  </h1>\n  <form (ngSubmit)=\"formSubmit()\">\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"candidate\">\n      <div class=\"row\">\n          <div class=\"form-group\">\n            <label>Name</label>\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\n          </div>\n          </div>     \n    <div class=\"row\">  \n      <div class=\"form-group \">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\n        </div>\n      </div>\n    <div class=\"row\">  \n    <div class=\"form-group \">\n        <label>UserName</label>\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n      </div>\n      \n    </div>\n      <div class=\"row\">\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\n      </div>\n      </div> \n      <div class=\"row\">\n      <div class=\"form-group\">\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\n          <div class=\"jp_listing_right_bar_btn\">\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\n          </div>\n        </div>\n      </div>\n    </div>\n    </form>\n      </div>\n      <app-footer></app-footer>"
 
 /***/ }),
 
