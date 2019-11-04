@@ -2979,13 +2979,13 @@ var OrgauthService = /** @class */ (function () {
     OrgauthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('organisation/orgregister', user, { headers: headers })
+        return this.http.post('org/orgregister', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     OrgauthService.prototype.authenticationUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('organisation/orgauthenticate', user, { headers: headers })
+        return this.http.post('org/orgauthenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     OrgauthService.prototype.getprofile = function () {
@@ -2993,7 +2993,7 @@ var OrgauthService = /** @class */ (function () {
         this.loadtoken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('organisation/orgprofile', { headers: headers })
+        return this.http.get('org/orgprofile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     OrgauthService.prototype.storeUserData = function (token, user) {
