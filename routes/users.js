@@ -23,8 +23,7 @@ router.post('/register', ( req , res , next) => {
         });
         newCand.save();
     }
-
-    if(newUser.Role == "organization"){
+    else if(newUser.Role == "organization"){
         let newOrg = new OrgUser({
             Email: req.body.Email,
         });

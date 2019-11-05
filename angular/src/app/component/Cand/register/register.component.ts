@@ -83,7 +83,7 @@ export class RegisterComponent implements OnInit {
       FirstName: this.FirstName,
       Role:this.Role
     }
-        // console.log(user);
+        console.log(user);
 
     //required fiels
     if(!this.uservalidateservice.validateregister(user)){
