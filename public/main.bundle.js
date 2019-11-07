@@ -2837,8 +2837,6 @@ var AuthService = /** @class */ (function () {
         this.user = user;
     };
     AuthService.prototype.login = function () {
-        var checkrole = localStorage.getItem('User');
-        console.log(checkrole["Role"]);
         return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
     AuthService.prototype.logout = function () {

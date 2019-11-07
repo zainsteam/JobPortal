@@ -42,8 +42,6 @@ export class AuthService {
   }
 
   login(){
-  const checkrole = localStorage.getItem('User');
-  console.log(checkrole["Role"]);
     return tokenNotExpired('id_token');
   }
 
