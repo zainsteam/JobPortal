@@ -11,22 +11,22 @@ export class JobserviceService {
 
 
   createCandidate(job:Job){
-    return this.http.post('job/create',job,{headers:this.headers});
+    return this.http.post('http://localhost:3000/job/create',job,{headers:this.headers});
   }
 
   
   readCandidatess(){
-    return this.http.get('job/read',{headers:this.headers});
+    return this.http.get('http://localhost:3000/job/read',{headers:this.headers});
   }
 
   
   updateCandidate(job:Job){
-    return this.http.put('job/update',job,{headers:this.headers});
+    return this.http.put('http://localhost:3000/job/update',job,{headers:this.headers});
   }
 
   
   deleteCandidate(id:string){
-    return this.http.delete('job/delete/'+id,{headers:this.headers});
+    return this.http.delete('http://localhost:3000/job/delete/'+id,{headers:this.headers});
   }
 
   setter(job:Job){
