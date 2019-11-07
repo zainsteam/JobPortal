@@ -19,7 +19,6 @@ import { TestComponent } from './component/test/test.component';
 
 import {AuthGuardService} from './services/auth-guard.service';
 import { Component } from '@angular/core';
-import { OrgloginComponent } from './component/Org/orglogin/orglogin.component';
 import { OrgregisterComponent } from './component/Org/orgregister/orgregister.component';
 import { WelcomeComponent } from './component/welcome/welcome.component';
 import { JobviewComponent } from './component/jobview/jobview.component';
@@ -29,7 +28,6 @@ export const routes1 : Routes = [
     {path:'', component:HomeComponent},
     {path:'Login', component:LoginComponent},
     {path:'Orgregister', component:OrgregisterComponent},
-    {path:'Orglogin',component:OrgloginComponent},
     {path:'Register', component:RegisterComponent},
     {path:'Job', component:JobvComponent},
     {path:'Interview', component:InterviewComponent,canActivate:[AuthGuardService]},

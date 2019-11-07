@@ -47,7 +47,6 @@ import { HcontentComponent } from './component/hcontent/hcontent.component';
 import { ResultComponent } from './component/Org/dashboard/result/result.component';
 import { ProfileviewComponent } from './component/Cand/profile/profileview/profileview.component';
 import { ProfileeditComponent } from './component/Cand/profile/profileedit/profileedit.component';
-import { OrgloginComponent } from './component/Org/orglogin/orglogin.component';
 import { OrgregisterComponent } from './component/Org/orgregister/orgregister.component';
 import { WelcomeComponent } from './component/welcome/welcome.component';
 import { QuizService } from './services/quiz.service';
@@ -79,7 +78,6 @@ import { JobviewComponent } from './component/jobview/jobview.component';
     ResultComponent,
     ProfileviewComponent,
     ProfileeditComponent,
-    OrgloginComponent,
     OrgregisterComponent,
     WelcomeComponent,
     JobviewComponent,

@@ -126,11 +126,10 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__component_Org_dashboard_result_result_component__ = __webpack_require__("../../../../../src/app/component/Org/dashboard/result/result.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__component_Cand_profile_profileview_profileview_component__ = __webpack_require__("../../../../../src/app/component/Cand/profile/profileview/profileview.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__component_Cand_profile_profileedit_profileedit_component__ = __webpack_require__("../../../../../src/app/component/Cand/profile/profileedit/profileedit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__component_Org_orglogin_orglogin_component__ = __webpack_require__("../../../../../src/app/component/Org/orglogin/orglogin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__component_Org_orgregister_orgregister_component__ = __webpack_require__("../../../../../src/app/component/Org/orgregister/orgregister.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__component_welcome_welcome_component__ = __webpack_require__("../../../../../src/app/component/welcome/welcome.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__services_quiz_service__ = __webpack_require__("../../../../../src/app/services/quiz.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__component_jobview_jobview_component__ = __webpack_require__("../../../../../src/app/component/jobview/jobview.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__component_Org_orgregister_orgregister_component__ = __webpack_require__("../../../../../src/app/component/Org/orgregister/orgregister.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__component_welcome_welcome_component__ = __webpack_require__("../../../../../src/app/component/welcome/welcome.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__services_quiz_service__ = __webpack_require__("../../../../../src/app/services/quiz.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__component_jobview_jobview_component__ = __webpack_require__("../../../../../src/app/component/jobview/jobview.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -156,7 +155,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 // import { FontAwesomeModule } from 'font-awesome';
 //components
-
 
 
 
@@ -214,10 +212,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_35__component_Org_dashboard_result_result_component__["a" /* ResultComponent */],
                 __WEBPACK_IMPORTED_MODULE_36__component_Cand_profile_profileview_profileview_component__["a" /* ProfileviewComponent */],
                 __WEBPACK_IMPORTED_MODULE_37__component_Cand_profile_profileedit_profileedit_component__["a" /* ProfileeditComponent */],
-                __WEBPACK_IMPORTED_MODULE_38__component_Org_orglogin_orglogin_component__["a" /* OrgloginComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__component_Org_orgregister_orgregister_component__["a" /* OrgregisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_40__component_welcome_welcome_component__["a" /* WelcomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_42__component_jobview_jobview_component__["a" /* JobviewComponent */],
+                __WEBPACK_IMPORTED_MODULE_38__component_Org_orgregister_orgregister_component__["a" /* OrgregisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_39__component_welcome_welcome_component__["a" /* WelcomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_41__component_jobview_jobview_component__["a" /* JobviewComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -235,7 +232,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__services_orgauth_service_service__["a" /* OrgauthService */],
                 __WEBPACK_IMPORTED_MODULE_10__component_Org_dashboard_services_qbservice_service__["a" /* QbserviceService */],
                 __WEBPACK_IMPORTED_MODULE_9__component_Org_dashboard_services_jobservice_service__["a" /* JobserviceService */],
-                __WEBPACK_IMPORTED_MODULE_41__services_quiz_service__["a" /* QuizService */],
+                __WEBPACK_IMPORTED_MODULE_40__services_quiz_service__["a" /* QuizService */],
                 __WEBPACK_IMPORTED_MODULE_11__services_candidate_service__["a" /* CandidateService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]]
@@ -271,11 +268,9 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__component_Cand_profile_profileedit_profileedit_component__ = __webpack_require__("../../../../../src/app/component/Cand/profile/profileedit/profileedit.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__component_test_test_component__ = __webpack_require__("../../../../../src/app/component/test/test.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_auth_guard_service__ = __webpack_require__("../../../../../src/app/services/auth-guard.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__component_Org_orglogin_orglogin_component__ = __webpack_require__("../../../../../src/app/component/Org/orglogin/orglogin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__component_Org_orgregister_orgregister_component__ = __webpack_require__("../../../../../src/app/component/Org/orgregister/orgregister.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__component_welcome_welcome_component__ = __webpack_require__("../../../../../src/app/component/welcome/welcome.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__component_jobview_jobview_component__ = __webpack_require__("../../../../../src/app/component/jobview/jobview.component.ts");
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__component_Org_orgregister_orgregister_component__ = __webpack_require__("../../../../../src/app/component/Org/orgregister/orgregister.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__component_welcome_welcome_component__ = __webpack_require__("../../../../../src/app/component/welcome/welcome.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__component_jobview_jobview_component__ = __webpack_require__("../../../../../src/app/component/jobview/jobview.component.ts");
 
 
 
@@ -300,14 +295,13 @@ var AppModule = /** @class */ (function () {
 var routes1 = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_0__component_home_home_component__["a" /* HomeComponent */] },
     { path: 'Login', component: __WEBPACK_IMPORTED_MODULE_1__component_Cand_login_login_component__["a" /* LoginComponent */] },
-    { path: 'Orgregister', component: __WEBPACK_IMPORTED_MODULE_19__component_Org_orgregister_orgregister_component__["a" /* OrgregisterComponent */] },
-    { path: 'Orglogin', component: __WEBPACK_IMPORTED_MODULE_18__component_Org_orglogin_orglogin_component__["a" /* OrgloginComponent */] },
+    { path: 'Orgregister', component: __WEBPACK_IMPORTED_MODULE_18__component_Org_orgregister_orgregister_component__["a" /* OrgregisterComponent */] },
     { path: 'Register', component: __WEBPACK_IMPORTED_MODULE_2__component_Cand_register_register_component__["a" /* RegisterComponent */] },
     { path: 'Job', component: __WEBPACK_IMPORTED_MODULE_12__component_jobv_jobv_component__["a" /* JobvComponent */] },
     { path: 'Interview', component: __WEBPACK_IMPORTED_MODULE_13__component_interview_interview_component__["a" /* InterviewComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__services_auth_guard_service__["a" /* AuthGuardService */]] },
-    { path: 'Welcome', component: __WEBPACK_IMPORTED_MODULE_20__component_welcome_welcome_component__["a" /* WelcomeComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__services_auth_guard_service__["a" /* AuthGuardService */]] },
+    { path: 'Welcome', component: __WEBPACK_IMPORTED_MODULE_19__component_welcome_welcome_component__["a" /* WelcomeComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__services_auth_guard_service__["a" /* AuthGuardService */]] },
     { path: 'test', component: __WEBPACK_IMPORTED_MODULE_16__component_test_test_component__["a" /* TestComponent */] },
-    { path: 'Job_view', component: __WEBPACK_IMPORTED_MODULE_21__component_jobview_jobview_component__["a" /* JobviewComponent */] },
+    { path: 'Job_view', component: __WEBPACK_IMPORTED_MODULE_20__component_jobview_jobview_component__["a" /* JobviewComponent */] },
     { path: 'Dashboard', component: __WEBPACK_IMPORTED_MODULE_3__component_Org_dashboard_dashboard_component__["a" /* DashboardComponent */],
         children: [
             { path: 'Dashboard/jobform', component: __WEBPACK_IMPORTED_MODULE_6__component_Org_dashboard_jobform_jobform_component__["a" /* JobformComponent */] },
@@ -1817,100 +1811,6 @@ var UserdashitemComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/component/Org/orglogin/orglogin.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "*[role=\"form\"] {\r\n    max-width: 430px;\r\n    padding: 50px;\r\n    margin: 0 auto;\r\n    background-color: #fff;\r\n    border-radius: 0.3em;\r\n    margin-top: 150px;\r\n\r\n}\r\n\r\n.a{\r\n    margin-top: 10px;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/component/Org/orglogin/orglogin.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container\" role=\"form\" >\n    <h3 style=\"text-align:center\">\n      Login As A Employer\n    </h3>    \n    <form (ngSubmit)=\"formSubmit()\" >\n      <div class=\"row\">  \n          <div class=\"form-group \">\n              <label>UserName</label>\n              <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n            </div>\n            \n          </div>\n            <div class=\"row\">\n            <div class=\"form-group\">\n              <label>Password</label>\n              <input type=\"Password\" class=\"form-control \" name=\"Password\"  [(ngModel)] = \"Password\">\n            </div>\n            </div>\n            <div class=\"row\">\n              <div class=\"form-group\">\n                <input type=\"checkbox\" >\n                <label>Remember Me</label>\n              </div>\n            </div>\n        <div class=\"row\" >\n        <div class=\"form-group\">\n          <input type=\"submit\" class=\"btn btn-info col-lg-3\" value=\"Sigin\"  >\n        </div>\n      </div>\n      <br>\n      <div class=\"row\">\n        <a (click)=\"Routeregister()\">Create a new Account!</a>\n      </div>\n      </form>\n        </div>  "
-
-/***/ }),
-
-/***/ "../../../../../src/app/component/Org/orglogin/orglogin.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrgloginComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages_module__ = __webpack_require__("../../../../angular2-flash-messages/module/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages_module__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_orgauth_service_service__ = __webpack_require__("../../../../../src/app/services/orgauth.service.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var OrgloginComponent = /** @class */ (function () {
-    function OrgloginComponent(flashmeassage, authservice, router) {
-        this.flashmeassage = flashmeassage;
-        this.authservice = authservice;
-        this.router = router;
-    }
-    OrgloginComponent.prototype.ngOnInit = function () {
-    };
-    OrgloginComponent.prototype.formSubmit = function () {
-        var _this = this;
-        var user = {
-            UserName: this.UserName,
-            Password: this.Password
-        };
-        this.authservice.authenticationUser(user).subscribe(function (data) {
-            if (data.success) {
-                _this.authservice.storeUserData(data.token, data.user);
-                _this.flashmeassage.show('you are logged in', { cssClass: 'alert-success', timeout: 3000 });
-                _this.router.navigate(['Dashboard']);
-            }
-            else {
-                _this.flashmeassage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
-                _this.router.navigate(['Orglogin']);
-            }
-        });
-    };
-    OrgloginComponent.prototype.Routeregister = function () {
-        this.router.navigate(['Orgregister']);
-    };
-    OrgloginComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-orglogin',
-            template: __webpack_require__("../../../../../src/app/component/Org/orglogin/orglogin.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/component/Org/orglogin/orglogin.component.css")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages_module__["FlashMessagesService"],
-            __WEBPACK_IMPORTED_MODULE_3__services_orgauth_service_service__["a" /* OrgauthService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
-    ], OrgloginComponent);
-    return OrgloginComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "../../../../../src/app/component/Org/orgregister/orgregister.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2938,6 +2838,8 @@ var AuthService = /** @class */ (function () {
         this.user = user;
     };
     AuthService.prototype.login = function () {
+        var checkrole = localStorage.getItem('User');
+        console.log(checkrole);
         return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
     AuthService.prototype.logout = function () {
