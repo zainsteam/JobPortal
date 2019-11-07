@@ -2811,7 +2811,6 @@ var AuthService = /** @class */ (function () {
         this.http = http;
     }
     AuthService.prototype.registerUser = function (user) {
-        console.log(user);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('users/register', user, { headers: headers })
@@ -2839,8 +2838,8 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.login = function () {
         var checkrole = localStorage.getItem('User');
-        console.log(checkrole);
-        return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
+        if (checkrole["Role"] == "candidate")
+            return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
     AuthService.prototype.logout = function () {
         this.authToken = null;
