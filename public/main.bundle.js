@@ -813,7 +813,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/component/Cand/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\n  <h1 style=\"text-align:center\">\n     {{ titl }}\n  </h1> \n  <form (ngSubmit)=\"formSubmit()\">\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"candidate\">\n      <div class=\"row\">\n          <div class=\"form-group\">\n            <label>Name</label>\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\n          </div>\n          </div>     \n    <div class=\"row\">  \n      <div class=\"form-group \">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\n        </div>\n      </div>\n    <div class=\"row\">  \n    <div class=\"form-group \">\n        <label>UserName</label>\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n      </div>\n      \n    </div>\n      <div class=\"row\">\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\n      </div>\n      </div> \n      <div class=\"row\">\n      <div class=\"form-group\">\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\n          <div class=\"jp_listing_right_bar_btn\">\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\n          </div>\n        </div>\n      </div>\n    </div>\n    </form>\n      </div>\n      <app-footer></app-footer>"
+module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\r\n  <h1 style=\"text-align:center\">\r\n     {{ titl }}\r\n  </h1> \r\n  <form (ngSubmit)=\"formSubmit()\">\r\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"candidate\">\r\n      <div class=\"row\">\r\n          <div class=\"form-group\">\r\n            <label>Name</label>\r\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\r\n          </div>\r\n          </div>     \r\n    <div class=\"row\">  \r\n      <div class=\"form-group \">\r\n          <label>Email</label>\r\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\r\n        </div>\r\n      </div>\r\n    <div class=\"row\">  \r\n    <div class=\"form-group \">\r\n        <label>UserName</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\r\n      </div>\r\n      \r\n    </div>\r\n      <div class=\"row\">\r\n      <div class=\"form-group\">\r\n        <label>Password</label>\r\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\r\n      </div>\r\n      </div> \r\n      <div class=\"row\">\r\n      <div class=\"form-group\">\r\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\r\n          <div class=\"jp_listing_right_bar_btn\">\r\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    </form>\r\n      </div>\r\n      <app-footer></app-footer>"
 
 /***/ }),
 
@@ -1932,7 +1932,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/component/Org/orgregister/orgregister.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\n  <h1 style=\"text-align:center\">\n    Register As A Employer / Company   \n  </h1>\n  <form (ngSubmit)=\"formSubmit()\">\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"candidate\">\n      <div class=\"row\">\n          <div class=\"form-group\">\n            <label>Name</label>\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\n          </div>\n          </div>     \n    <div class=\"row\">  \n      <div class=\"form-group \">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\n        </div>\n      </div>\n    <div class=\"row\">  \n    <div class=\"form-group \">\n        <label>UserName</label>\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n      </div>\n      \n    </div>\n      <div class=\"row\">\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\n      </div>\n      </div> \n      <div class=\"row\">\n      <div class=\"form-group\">\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\n          <div class=\"jp_listing_right_bar_btn\">\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\n          </div>\n        </div>\n      </div>\n    </div>\n    </form>\n      </div>\n      <app-footer></app-footer>"
+module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin-bottom: 10%;\" >\n  <h1 style=\"text-align:center\">\n    Register As A Employer / Company   \n  </h1>\n  <form (ngSubmit)=\"formSubmit()\">\n    <input type=\"text\" class=\"form-control hidden\" name=\"Role\" [(ngModel)] = \"Role\" value=\"organization\">\n      <div class=\"row\">\n          <div class=\"form-group\">\n            <label>Name</label>\n            <input type=\"text\" class=\"form-control\"  [(ngModel)] = \"FirstName\" name=\"FirstName\"  >\n          </div>\n          </div>     \n    <div class=\"row\">  \n      <div class=\"form-group \">\n          <label>Email</label>\n          <input type=\"email\" class=\"form-control\" name=\"Email\" [(ngModel)] = \"Email\">\n        </div>\n      </div>\n    <div class=\"row\">  \n    <div class=\"form-group \">\n        <label>UserName</label>\n        <input type=\"text\" class=\"form-control\" name=\"UserName\" [(ngModel)] = \"UserName\">\n      </div>\n      \n    </div>\n      <div class=\"row\">\n      <div class=\"form-group\">\n        <label>Password</label>\n        <input type=\"Password\" class=\"form-control \" id=\"password\"  required data-toggle=\"popover\"  title=\"Password Strength\" name=\"Password\"  [(ngModel)] = \"Password\" required data-content=\"Enter Password...\">\n      </div>\n      </div> \n      <div class=\"row\">\n      <div class=\"form-group\">\n        <div class=\"jp_listing_right_bar_btn_wrapper\">\n          <div class=\"jp_listing_right_bar_btn\">\n            <input type=\"submit\"  class=\"btn btn-info col-lg-4\"  value=\"Register\" >\n          </div>\n        </div>\n      </div>\n    </div>\n    </form>\n      </div>\n      <app-footer></app-footer>"
 
 /***/ }),
 
@@ -1942,6 +1942,11 @@ module.exports = "<div class=\"container FormRoot\" role=\"form\" style=\"margin
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrgregisterComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_uservalidate_service__ = __webpack_require__("../../../../../src/app/services/uservalidate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages_module__ = __webpack_require__("../../../../angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages_module___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages_module__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1952,8 +1957,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
 var OrgregisterComponent = /** @class */ (function () {
-    function OrgregisterComponent() {
+    function OrgregisterComponent(uservalidateservice, flashmeassage, authservice, router) {
+        this.uservalidateservice = uservalidateservice;
+        this.flashmeassage = flashmeassage;
+        this.authservice = authservice;
+        this.router = router;
     }
     OrgregisterComponent.prototype.ngOnInit = function () {
         $(document).ready(function () {
@@ -1999,13 +2012,49 @@ var OrgregisterComponent = /** @class */ (function () {
             });
         });
     };
+    OrgregisterComponent.prototype.formSubmit = function () {
+        var _this = this;
+        var user = {
+            Email: this.Email,
+            UserName: this.UserName,
+            Password: this.Password,
+            FirstName: this.FirstName,
+            Role: "organization"
+        };
+        console.log(user.Role);
+        //required fiels
+        if (!this.uservalidateservice.validateregister(user)) {
+            this.flashmeassage.show('please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        //email validation
+        if (!this.uservalidateservice.validateemail(user.Email)) {
+            this.flashmeassage.show('please use valid email ', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        //register User
+        this.authservice.registerUser(user).subscribe(function (data) {
+            // console.log(user);
+            if (data.success) {
+                _this.flashmeassage.show('you are now registered and can log in', { cssClass: 'alert-success', timeout: 3000 });
+                _this.router.navigate(['/Login']);
+            }
+            else {
+                _this.flashmeassage.show('something goes wrong', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.router.navigate(['/Register']);
+            }
+        });
+    };
     OrgregisterComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-orgregister',
             template: __webpack_require__("../../../../../src/app/component/Org/orgregister/orgregister.component.html"),
             styles: [__webpack_require__("../../../../../src/app/component/Org/orgregister/orgregister.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_uservalidate_service__["a" /* UservalidateService */],
+            __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages_module__["FlashMessagesService"],
+            __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */]])
     ], OrgregisterComponent);
     return OrgregisterComponent;
 }());

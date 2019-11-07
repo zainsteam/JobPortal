@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UservalidateService } from '../../../services/uservalidate.service';
+import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages/module';
+import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 declare var $ : any; 
 @Component({
   selector: 'app-orgregister',
