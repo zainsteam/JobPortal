@@ -2838,8 +2838,8 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.login = function () {
         var checkrole = localStorage.getItem('User');
-        if (checkrole["Role"] == "candidate")
-            return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
+        console.log(checkrole["Role"]);
+        return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
     AuthService.prototype.logout = function () {
         this.authToken = null;
