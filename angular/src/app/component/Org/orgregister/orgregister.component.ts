@@ -6,8 +6,20 @@ declare var $ : any;
   styleUrls: ['./orgregister.component.css']
 })
 export class OrgregisterComponent implements OnInit {
+ Email: String;
+  UserName: String;
+  Password: String;
+  FirstName: String;
+  Role:String; 
 
-  constructor() { }
+
+  constructor(private uservalidateservice: UservalidateService,
+     private flashmeassage: FlashMessagesService,
+     private authservice: AuthService,
+     private router:Router  
+    ) {
+    
+  }
 
   ngOnInit() {
     $(document).ready(function(){
@@ -54,7 +66,40 @@ export class OrgregisterComponent implements OnInit {
       });
       
       })
-
   }
 
+  public formSubmit() {
+    const user ={
+      Email: this.Email,
+      UserName: this.UserName,
+      Password: this.Password,
+      FirstName: this.FirstName,
+      Role:"organization"
+    }
+        console.log(user.Role);
+
+    //required fiels
+    if(!this.uservalidateservice.validateregister(user)){
+      this.flashmeassage.show('please fill in all fields',{cssClass: 'alert-danger',timeout: 3000 });
+      return false;
+    }
+
+    //email validation
+    if(!this.uservalidateservice.validateemail(user.Email)){
+      this.flashmeassage.show('please use valid email ',{cssClass: 'alert-danger',timeout: 3000 });
+      return false;
+    }
+
+    //register User
+    this.authservice.registerUser(user).subscribe(data => {
+      // console.log(user);
+      if(data.success){
+        this.flashmeassage.show('you are now registered and can log in',{cssClass: 'alert-success',timeout:3000});
+        this.router.navigate(['/Login']);
+      } else {
+        this.flashmeassage.show('something goes wrong',{cssClass: 'alert-danger',timeout:3000});
+        this.router.navigate(['/Register']);
+      }
+    });
+  }
 }
