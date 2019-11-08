@@ -4,17 +4,18 @@ var Job = require('../model/job');
 
 router.post('/create',(req, res, next) => {
     var newJob = new Job ({
-        jcat:req.body.jcat,
+        category:req.body.category,
         Email:req.body.Email,
-    jtit: req.body.jtit,
-    jtype: req.body.jtype,
-    minsal: req.body.minsal,
-    maxsal:req.body.maxsal,
-    ldate: req.body.ldate,
+    title: req.body.title,
+    type: req.body.type,
+    minsalary: req.body.minsalary,
+    maxsalary:req.body.maxsalary,
+    lastdate: req.body.lastdate,
     city: req.body.city,
-    exp: req.body.exp,
-    expt: req.body.expt,
-    jdes: req.body.jdes,
+    experience: req.body.experience,
+    experiencetime: req.body.experiencetime,
+    description: req.body.descriptionn,
+    responsiblity:req.body.responsiblity
     });
     newJob.save((err, job) => {
         if(err)
@@ -35,18 +36,18 @@ router.put('/update',(req, res, next) => {
     Job.findById(req.body._id, (err, job) => {
         if(err)
             res.status(500).json({ errmsg: err });
-            job.jcat=req.body.jcat;
-            job.Email=req.body.Email;
-    job.jtit= req.body.jtit;
-    job.jtype= req.body.jtype;
-    job.minsal= req.body.minsal;
-    job.maxsal=req.body.maxsal;
-    job.ldate= req.body.ldate;
-    job.city= req.body.city;
-    job.skill=req.body.skill;
-    job.exp= req.body.exp;
-    job.expt= req.body.expt;
-    job.jdes= req.body.jdes;
+            category=req.body.category,
+        Email=req.body.Email,
+    title= req.body.title,
+    type= req.body.type,
+    minsalary= req.body.minsalary,
+    maxsalary=req.body.maxsalary,
+    lastdat=req.body.lastdate,
+    city=req.body.city,
+    experience=req.body.experience,
+    experiencetime=req.body.experiencetime,
+    description= req.body.descriptionn,
+    responsiblity=req.body.responsiblity
             job.save((err, job) => {
             if(err)
                 res.status(500).json({ errmsg: err});

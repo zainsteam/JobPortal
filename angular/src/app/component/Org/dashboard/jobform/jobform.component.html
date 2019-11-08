@@ -16,13 +16,13 @@
     <!-- /. tools -->
   </div>
   <div class="box-body">
-    <form (ngSubmit)="createCandidate()" >
+    <form (ngSubmit)="createJob()" >
       <div class="row">
         <input type="text" class="form-control hidden" name="Email" [(ngModel)]="job.Email" >
 
         <div class="form-group col-lg-4">
             <label for="category">Job Category</label>
-            <select class="form-control" aria-placeholder="Please Select" name="category" [(ngModel)]="job.jcat" >
+            <select class="form-control" aria-placeholder="Please Select" name="category" [(ngModel)]="job.category" >
               <option>Medical</option>
               <option>Developer</option>
               <option>Technology</option>
@@ -32,11 +32,11 @@
           </div>        
           <div class="form-group col-lg-4">
               <label>Job Title</label> 
-            <input type="Text" class="form-control" [(ngModel)]="job.jtit" name="title" />
+            <input type="Text" class="form-control" [(ngModel)]="job.title" name="title" />
           </div>
           <div class="form-group col-lg-4">
           <label>Job Type</label> 
-          <select type="Text" class="form-control" [(ngModel)]="job.jtype" name="type">
+          <select type="Text" class="form-control" [(ngModel)]="job.type" name="type">
               <option>Full Time</option>
               <option>Part Time</option>
               <option>Internship</option>
@@ -46,15 +46,15 @@
           <div class="row">
     <div class="form-group col-lg-2">
         <label>Minimum Salary</label> 
-      <input type="number" class="form-control" [(ngModel)]="job.minsal" name="minsal"/>
+      <input type="number" class="form-control" [(ngModel)]="job.minsalary" name="minsalary"/>
         </div>
         <div class="form-group col-lg-2">
             <label>Maximum Salary</label> 
-          <input type="number" class="form-control" [(ngModel)]="job.maxsal" name="maxsal"/>
+          <input type="number" class="form-control" [(ngModel)]="job.maxsalary" name="maxsalary"/>
             </div>    
             <div class="form-group col-lg-2">
                 <label>Last Date</label> 
-              <input type="date" class="form-control" [(ngModel)]="job.ldate"  name="ldate"/>
+              <input type="date" class="form-control" [(ngModel)]="job.lastdate"  name="lastdate"/>
                 </div>      
                 <div class="form-group col-lg-2">
                     <label>City</label> 
@@ -92,26 +92,25 @@
     <div class="row" id="rexp">
           <div class="form-group col-lg-4">
             <label>Experience Requirements</label>
-            <input type="text" class="form-control"  placeholder=" Add Requirements" [(ngModel)]="job.exp" name="exp"/>  
+            <input type="text" class="form-control"  placeholder=" Add Requirements" [(ngModel)]="job.experience" name="experience"/>  
           </div>
           <div class="form-group col-lg-2">
               <label>Experience Time</label>
-              <input type="Number" class="form-control" [(ngModel)]="job.expt" name="expt"/>  
+              <input type="Number" class="form-control" [(ngModel)]="job.experiencetime" name="experiencetime"/>  
             </div>
         </div>           
     
         <div class="row">
     <div class="form-group col-lg-6">
         <label>Job Description</label> 
-      <textarea type="Text" class="form-control" rows="5" [(ngModel)]="job.jdes"  name="description"></textarea>
+      <textarea type="Text" class="form-control" rows="5" [(ngModel)]="job.description"  name="description"></textarea>
+    </div>
+
+    <div class="form-group col-lg-6">
+        <label>Job responsiblity</label> 
+      <textarea type="Text" class="form-control" rows="5" [(ngModel)]="job.responsiblity"  name="responsiblity"></textarea>
     </div>
 </div>
-<div class="row">
-    <div class="form-group col-lg-4">
-        <label>Upload Poster</label> 
-      <input type="file" class="form-control"/>
-    </div>
-  </div>
   <div class="box-footer clearfix">
     <div class="form-group ">
       <input type="submit" class="pull-right btn btn-primary col-lg-3" Value="Post" />

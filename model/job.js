@@ -2,17 +2,18 @@ var mongoose = require('mongoose');
 
 
 var job =  mongoose.Schema({
-    jcat:{ type: String },
+    category:{ type: String },
     Email:{ type: String },
-    jtit: { type: String },
-    jtype: { type: String },
-    minsal: { type: Number },
-    maxsal: { type: Number },
-    ldate: { type: String },
+    title: { type: String },
+    type: { type: String },
+    minsalary: { type: Number },
+    maxsalary: { type: Number },
+    lastdate: { type: String },
     city: { type: String },
-    exp: { type: String },
-    expt: { type: String },
-    jdes: { type: String }
+    experience: { type: String },
+    experiencetime: { type: String },
+    description: { type: String },
+    responsiblity: { type: String }
 });
 
 module.exports = mongoose.model('job', job);

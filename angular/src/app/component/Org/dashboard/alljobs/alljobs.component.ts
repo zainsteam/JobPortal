@@ -15,11 +15,11 @@ export class AlljobsComponent implements OnInit {
   constructor(private jobservice:JobserviceService, private router:Router) { }
 
   ngOnInit() {
-    this.readCandidates();
+    this.readJobs();
   }
 
-  readCandidates(){
-    this.jobservice.readCandidatess().subscribe(
+  readJobs(){
+    this.jobservice.readJobs().subscribe(
       data => {
         console.log(data);
         this.jobs=data['msg'];
@@ -36,7 +36,7 @@ export class AlljobsComponent implements OnInit {
   }
 
   dodelete(Job){
-    this.jobservice.deleteCandidate(Job._id).subscribe(
+    this.jobservice.deleteJob(Job._id).subscribe(
       data => {
         this.jobs.splice(this.jobs.indexOf(Job),1);
       },

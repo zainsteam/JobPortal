@@ -59,13 +59,13 @@ export class JobformComponent implements OnInit {
 
   }
 
-  createCandidate(){
+  createJob(){
 
     console.log(this.job);
     this.job.Email = this.user.Email;
 
     if (this.job._id == undefined){
-    this.jobservice.createCandidate(this.job).subscribe(
+    this.jobservice.createJob(this.job).subscribe(
       data => {
         console.log(data);
         this.router.navigate(['Dashboard/Dashboard/alljobs']);
@@ -75,7 +75,7 @@ export class JobformComponent implements OnInit {
       }
     )
   }else{
-    this.jobservice.updateCandidate(this.job).subscribe(
+    this.jobservice.updateJob(this.job).subscribe(
       data => {
         console.log(data);
         this.router.navigate(['Dashboard/Dashboard/alljobs']);
