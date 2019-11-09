@@ -14,7 +14,7 @@ router.post('/create',(req, res, next) => {
     city: req.body.city,
     experience: req.body.experience,
     experiencetime: req.body.experiencetime,
-    description: req.body.descriptionn,
+    description: req.body.description,
     responsiblity:req.body.responsiblity
     });
     newJob.save((err, job) => {

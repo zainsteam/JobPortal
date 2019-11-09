@@ -13,7 +13,10 @@ private job:Job;
 
   ngOnInit() {
   this.job = this.jobservice.getter();
-    console.log(this.job);
+  if(this.job == undefined){
+  	this.router.navigate(['/Job']);
+  }
+    // console.log(this.job);
   }
 
 }

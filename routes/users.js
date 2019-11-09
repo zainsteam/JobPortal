@@ -16,27 +16,47 @@ router.post('/register', ( req , res , next) => {
         FirstName: req.body.FirstName,
         Role:req.body.Role,
     });
+    let finded = false;
+    User.findOne({ Email: req.body.Email }, function(err, emailexists) {
+        if (emailexists == null) {
+            User.findOne({ UserName: req.body.UserName }, function(err, usernameexists) {
+                if(usernameexists == null){
+                User.addUser(newUser, (err, user) => {
+                
+                    if(err){
+                        res.json({success: false, msg: ' failed to registered'});
+                    } 
+                    else {
+                        if(newUser.Role == "candidate"){
+                            let newCand = new Candidate({
+                                Email: req.body.Email,
+                            });
+                            newCand.save();
+                        }
+                        else if(newUser.Role == "organization"){
+                            let newOrg = new OrgUser({
+                                Email: req.body.Email,
+                            });
+                            newOrg.save();
+                        }
+                        res.json({success: true, msg: 'User registered'});
+                    }
+                });
 
-    if(newUser.Role == "candidate"){
-        let newCand = new Candidate({
-            Email: req.body.Email,
-        });
-        newCand.save();
-    }
-    else if(newUser.Role == "organization"){
-        let newOrg = new OrgUser({
-            Email: req.body.Email,
-        });
-        newOrg.save();
-    }
-
-    User.addUser(newUser, (err, user) => {
-        if(err){
-            res.json({success: false, msg: ' failed to registered'});
-        } else {
-            res.json({success: true, msg: 'User registered'});
+            }
+    else {
+            res.json({success: false, msg: 'UserName already exists'});
         }
+
+});
+        }
+        else {
+            res.json({success: false, msg: 'Email already exists'});
+        }
+
+
     });
+     
 });
 
 //authenticate
