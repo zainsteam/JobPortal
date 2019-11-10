@@ -11,6 +11,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { UservalidateService} from '../app/services/uservalidate.service';
 import { AuthService } from '../app/services/auth.service';
 import { AuthGuardService} from './services/auth-guard.service';
+import {AuthOrgguardService} from './services/auth-orgguard.service';
 import { OrgauthService } from './services/orgauth.service.service';
 import { JobserviceService } from './component/Org/dashboard/services/jobservice.service';
 import { QbserviceService } from './component/Org/dashboard/services/qbservice.service';
@@ -102,6 +103,7 @@ import { JobviewComponent } from './component/jobview/jobview.component';
     QbserviceService,
     JobserviceService,
     QuizService,
+    AuthOrgguardService,
     CandidateService
   ],
   bootstrap: [AppComponent]

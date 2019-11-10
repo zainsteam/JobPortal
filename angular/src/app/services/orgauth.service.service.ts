@@ -16,14 +16,14 @@ export class OrgauthService {
    registerUser(user){
     let headers = new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:3000/org/orgregister',user,{headers:headers})
+    return this.http.post('org/orgregister',user,{headers:headers})
     .map(res => res.json());
   } 
  
   authenticationUser(user){
     let headers = new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:3000/org/orgauthenticate',user,{headers:headers})
+    return this.http.post('org/orgauthenticate',user,{headers:headers})
     .map(res => res.json());
   } 
 
@@ -32,7 +32,7 @@ export class OrgauthService {
     this.loadtoken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type','application/json');
-    return this.http.get('http://localhost:3000/org/orgprofile',{headers:headers})
+    return this.http.get('org/orgprofile',{headers:headers})
     .map(res => res.json());
   }
 
