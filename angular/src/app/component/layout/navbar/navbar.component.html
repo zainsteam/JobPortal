@@ -13,7 +13,7 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-                    <li *ngIf="authservice.login()" class="nav-item ">
+                    <li *ngIf="authservice.login() && authorgguard.canActivate()" class="nav-item ">
               <a class="nav-link ">
                     <span class="menu-icon" id="menu-icon"><i class="fa fa-times" aria-hidden="true" id="chang-menu-icon"></i></span>
                 </a>  
@@ -29,11 +29,7 @@
               <span class="glyphicon glyphicon-file"></span>
             Job</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Job_view']">
-              <span class="glyphicon glyphicon-file"></span>
-        Job_view</a>
-        </li>
+        
       <!-- <li class="form-inline my-2 col-md-0">
         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
       </li> -->
@@ -96,13 +92,13 @@
                     </ul>
                   </li>
 
-                  <li *ngIf="authservice.login()" class="nav-item">
+                  <li *ngIf="authservice.login() && authorgguard.canActivate()" class="nav-item">
                     <a class="nav-link" [routerLinkActive] = "['active']"  [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['Dashboard']">
                       <span class="glyphicon glyphicon-th-list"></span>
                     Dashboard</a>
                 </li>
                 
-          <li *ngIf="authservice.login()" class="nav-item ">
+          <li *ngIf="authservice.login() && authguard.canActivate()" class="nav-item ">
               <a class="nav-link" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}" [routerLink] = "['profile']"> <span class="glyphicon glyphicon-user"></span>    
                 Profile</a>
           </li>

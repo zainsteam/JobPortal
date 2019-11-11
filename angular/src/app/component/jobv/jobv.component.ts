@@ -11,22 +11,25 @@ import {Router} from '@angular/router';
 })
 export class JobvComponent implements OnInit {
 private jobs:Job[];
+
+private count ;
   constructor(private jobservice:JobserviceService, private router:Router) { }
 
   ngOnInit() {
-  this.readCandidates();
+  this.ReadJobs();
   }
 
-  readCandidates(){
+  ReadJobs(){
     this.jobservice.readJobs().subscribe(
       data => {
-        console.log(data);
+        // this.count = data.msg.length;
         this.jobs=data['msg'];
       },
       error => {
         console.log(error);
       }
-    )
+    );
+
   }
 
   setJob(job){
