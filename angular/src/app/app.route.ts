@@ -18,11 +18,8 @@ import { ProfileeditComponent } from './component/Cand/profile/profileedit/profi
 import { TestComponent } from './component/test/test.component';
 
 import {AuthGuardService} from './services/auth-guard.service';
-<<<<<<< HEAD
 import { AuthorgguardService} from './services/authorgguard.service';
-=======
-import {AuthOrgguardService} from './services/auth-orgguard.service';
->>>>>>> master
+
 import { Component } from '@angular/core';
 import { OrgregisterComponent } from './component/Org/orgregister/orgregister.component';
 import { WelcomeComponent } from './component/welcome/welcome.component';
@@ -49,11 +46,7 @@ export const routes1 : Routes = [
         {path:'Dashboard/userdashitem',component:UserdashitemComponent},
         {path:'Dashboard/applicant',component:ApplicantComponent},
         {path:'Dashboard/alljobs',component:AlljobsComponent}
-<<<<<<< HEAD
     ],canActivate:[AuthorgguardService]},
-=======
-    ],canActivate:[AuthOrgguardService]},
->>>>>>> master
      {path:'profile', component:ProfileComponent,
      children:[
          {path:'',component:ProfileviewComponent},
