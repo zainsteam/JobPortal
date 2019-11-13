@@ -5,7 +5,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Injectable()
 export class JobserviceService {
   private job:Job;
-  // private baseUri:string="http://localhost:3000/jobs";
+  // private baseUri:string="jobs";
   private headers = new HttpHeaders().set('Content-Type', 'application/json' );
   constructor(private http:HttpClient) { }
 
