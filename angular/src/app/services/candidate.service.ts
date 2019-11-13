@@ -13,7 +13,7 @@ export class CandidateService {
 
    updateUser(candidate:Candidate){
    	// console.log(candidate);	
-    return this.http.put('http://localhost:3000/users/update',candidate,{headers:this.headers});
+    return this.http.put('users/update',candidate,{headers:this.headers});
   }
 
  
