@@ -12,6 +12,8 @@ import { UservalidateService} from '../app/services/uservalidate.service';
 import { AuthService } from '../app/services/auth.service';
 import { AuthGuardService} from './services/auth-guard.service';
 import { AuthorgguardService} from './services/authorgguard.service';
+import { ApplyService } from '../app/services/apply.service';
+
 
 import { JobserviceService } from './component/Org/dashboard/services/jobservice.service';
 import { QbserviceService } from './component/Org/dashboard/services/qbservice.service';
@@ -103,7 +105,8 @@ import { JobviewComponent } from './component/jobview/jobview.component';
     QbserviceService,
     JobserviceService,
     QuizService,
-    CandidateService
+    CandidateService,
+    ApplyService
   ],
   bootstrap: [AppComponent]
 })
