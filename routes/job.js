@@ -24,7 +24,7 @@ router.post('/create',(req, res, next) => {
     });
 });
 
-router.get('/read',(req, res, next) => {
+router.get('/read_all',(req, res, next) => {
     Job.find({}, (err,job) => {
         if(err)
             res.status(500).json({ errmsg: err});

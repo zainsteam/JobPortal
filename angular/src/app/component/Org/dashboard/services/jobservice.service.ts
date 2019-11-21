@@ -16,7 +16,7 @@ export class JobserviceService {
 
   
   readJobs(){
-    return this.http.get('http://localhost:3000/job/read',{headers:this.headers});
+    return this.http.get('http://localhost:3000/job/read_all',{headers:this.headers});
   }
 
   
