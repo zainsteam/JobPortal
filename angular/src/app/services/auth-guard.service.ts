@@ -10,15 +10,13 @@ export class AuthGuardService implements CanActivate{
    }
    canActivate(){
      if(this.authService.login()){
-     const token = JSON.parse(localStorage.getItem('User'));
-     if(token["Role"] == "candidate")
-      return true;
-       else
-       return false;
+      let user = JSON.parse(localStorage.getItem('User'));
+      if (user.Role == "candidate")
+          return true;
      } else {
        this.router.navigate(['/Login']);
        return false;
      }
-   }
+        }
 
-}
+  }

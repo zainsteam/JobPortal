@@ -1592,13 +1592,10 @@ ul{
 	border-top:3px solid #23c0e9;
 	position:relative;
 	background-color: hsla(200,40%,30%,.4);
-	background-image:		
-
-		url('../images/header/header_img.jpg'),
-		url('https://db.tt/vKBcgeOj');
+	background-image: url('../33.jpg');
 	background-repeat: repeat-x;
 	background-position: 
-		0 20%,
+		0 85%,
 		0 95%,
 		0 0,
 		0 100%,

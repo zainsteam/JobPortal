@@ -27,6 +27,7 @@ const users = require('./routes/users');
 const orgusers = require('./routes/org');
 const job = require('./routes/job');
 const qbank = require('./routes/qb');
+const apply = require('./routes/apply');
 
 //cors midleware
 app.use(cors());
@@ -45,6 +46,7 @@ app.use('/users',users);
 app.use('/organisation',orgusers);
 app.use('/job',job);
 app.use('/qbank',qbank);
+app.use('/apply',apply);
 
 //Static folder
 app.use(express.static(path.join(__dirname, 'public')));

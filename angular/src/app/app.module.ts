@@ -11,8 +11,10 @@ import { HttpClientModule} from '@angular/common/http';
 import { UservalidateService} from '../app/services/uservalidate.service';
 import { AuthService } from '../app/services/auth.service';
 import { AuthGuardService} from './services/auth-guard.service';
-import {AuthOrgguardService} from './services/auth-orgguard.service';
-import { OrgauthService } from './services/orgauth.service.service';
+import { AuthorgguardService} from './services/authorgguard.service';
+import { ApplyService } from '../app/services/apply.service';
+
+
 import { JobserviceService } from './component/Org/dashboard/services/jobservice.service';
 import { QbserviceService } from './component/Org/dashboard/services/qbservice.service';
 import { CandidateService } from './services/candidate.service';
@@ -99,12 +101,12 @@ import { JobviewComponent } from './component/jobview/jobview.component';
     UservalidateService,
     AuthService,
     AuthGuardService,
-    OrgauthService,
+    AuthorgguardService,
     QbserviceService,
     JobserviceService,
     QuizService,
-    AuthOrgguardService,
-    CandidateService
+    CandidateService,
+    ApplyService
   ],
   bootstrap: [AppComponent]
 })
